@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.halo</groupId>
+        <artifactId>hello-spring-cloud-alibaba-dependencies</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
+        <relativePath>../hello-spring-cloud-alibaba-dependencies/pom.xml</relativePath>
+    </parent>
+    <artifactId>hello-spring-cloud-alibaba-nacos-dubbo-consumer</artifactId>
+    <packaging>jar</packaging>
+
+    <name>hello-spring-cloud-alibaba-nacos-dubbo-consumer</name>
+    <url>http://zdf.athalo.cn</url>
+    <inceptionYear>2019-Now</inceptionYear>
+
+    <dependencies>
+
+        <!-- Spring Boot Begin -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <!-- Spring Boot End -->
+
+        <!--Dubbo netty -->
+        <dependency>
+            <groupId>io.netty</groupId>
+            <artifactId>netty-all</artifactId>
+            <version>4.1.28.Final</version>
+        </dependency>
+        <!-- Dubbo Nacos registry dependency -->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>dubbo-registry-nacos</artifactId>
+            <version>0.0.1</version>
+        </dependency>
+
+        <!-- Dubbo dependency -->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>dubbo</artifactId>
+            <version>2.6.5</version>
+        </dependency>
+
+        <!-- Alibaba Spring Context extension -->
+        <dependency>
+            <groupId>com.alibaba.spring</groupId>
+            <artifactId>spring-context-support</artifactId>
+            <version>1.0.2</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <mainClass>com.halo.hello.spring.cloud.dubbo.DubboConsumerApplication</mainClass>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>
